@@ -63,7 +63,7 @@ public class Producer implements MessageListener {
                 Message msg = session.createTextMessage(message);
                 msg.setJMSCorrelationID(correlationId);
                 msg.setJMSReplyTo(replyDestination);
-                return null;
+                return msg;
             }
         });
 
